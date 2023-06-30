@@ -1,0 +1,258 @@
+:root {
+  --body-bg-color: hsl(27, 66%, 92%);
+  --first-bg-color: hsl(10, 79%, 65%);
+  --first-text-color: white;
+  --second-bg-color: hsla(33, 100%, 98%, 0.8);
+  --second-text-color: hsl(25, 47%, 15%);
+  --third-bg-color: hsl(186, 34%, 60%);
+  --third-text-color: hsl(28, 10%, 53%);
+  --fw-400: 400;
+  --fw-700: 700;
+  --bg-active-one: hsla(10, 79%, 65%, 0.75);
+  --bg-active-two: hsla(186, 34%, 60%, 0.75);
+}
+
+/* 
+### Primary
+
+- Soft red: hsl(10, 79%, 65%)
+- Cyan: hsl(186, 34%, 60%)
+
+### Neutral
+
+- Dark brown: hsl(25, 47%, 15%)
+- Medium brown: hsl(28, 10%, 53%)
+- Cream: hsl(27, 66%, 92%)
+- Very pale orange: hsl(33, 100%, 98%)
+*/
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  background-color: var(--body-bg-color);
+  color: var(--first-text-color);
+  font-family: "DM Sans", sans-serif;
+  font-size: 18px;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* Start */
+
+.expenses {
+  width: 337.5px;
+  margin: 3rem 0;
+}
+
+.balance,
+.spending,
+.chart__bar-bg {
+  box-shadow: 2px 2px 3px rgba(168, 161, 153, 0.5);
+}
+
+.balance,
+.spending {
+  border-radius: 10px;
+}
+
+.balance {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--first-bg-color);
+  padding: 1.15rem 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.balance__title {
+  margin: 0 0 0.75rem;
+  font-weight: 400;
+  font-size: 1em;
+}
+
+.spending__title,
+.spending__total {
+  font-size: 1.25em;
+  color: var(--second-text-color);
+}
+
+.balance__total,
+.spending__title {
+  font-size: 1.25em;
+}
+
+.balance__total {
+  font-size: 1.25em;
+  font-weight: var(--fw-700);
+  letter-spacing: 0.1rem;
+}
+
+.balance__img {
+  width: 3.75rem;
+  margin-right: 0.25rem;
+}
+
+.spending {
+  padding: 1.75rem 1.25rem;
+  background-color: var(--second-bg-color);
+}
+
+.spending__title,
+.spending__total {
+  color: var(--);
+}
+
+.spending__title {
+  margin: 0 0 1.5rem;
+}
+
+.chart {
+  display: flex;
+  gap: 0.5em;
+  height: 230px;
+  margin-bottom: 1.5em;
+  padding: 1.5em 0;
+  border-bottom: 1px solid var(--body-bg-color);
+}
+
+.chart__bar-container {
+  flex: 1 1 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6em;
+  cursor: pointer;
+}
+
+.chart__day {
+  font-size: 0.675em;
+  text-align: center;
+  color: var(--third-text-color);
+}
+
+.chart__bar {
+  display: flex;
+  flex-direction: column-reverse;
+  height: 100%;
+}
+
+.chart__bar-bg {
+  position: relative;
+  border-radius: 2.25px;
+  background-color: var(--first-bg-color);
+}
+
+.chart__bar-bg,
+.day-spending-value {
+  border-radius: 4px;
+}
+
+.spending__footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.spending__footer-col-two {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+
+.spending__total-sub-title,
+.spending__percentage-sub-title {
+  font-size: 0.9em;
+  font-weight: var(--fw-400);
+  color: var(--third-text-color);
+}
+
+.spending__total-sub-title {
+  margin: 0 0 0.65rem;
+}
+
+.spending__total {
+  font-size: 1.5em;
+  font-weight: var(--fw-700);
+}
+
+.spending__percentage {
+  text-align: right;
+}
+
+.spending__percentage-sub-title {
+  margin: 0;
+}
+
+/* js insert element */
+
+.day-spending-value {
+  position: absolute;
+  top: -35px;
+  left: -4px;
+  padding: 0.55rem 0.45rem;
+  background-color: var(--second-text-color);
+  font-size: 0.65rem;
+}
+
+/* js class */
+.chart__bar-bg--max-bg {
+  background-color: var(--third-bg-color);
+}
+
+.chart__bar-bg--active-max {
+  background-color: var(--bg-active-two);
+}
+
+.chart__bar-bg--active {
+  background-color: var(--bg-active-one);
+}
+
+/* Marca de agua */
+
+.attribution {
+  color: var(--third-text-color);
+  font-size: 11px;
+  text-align: center;
+  opacity: 0.7;
+  bottom: 1rem;
+}
+
+.attribution > a {
+  color: inherit;
+}
+
+@media (min-width: 850px) {
+  .expenses {
+    width: 400px;
+    border: 1x solid;
+  }
+
+  .balance,
+  .spending {
+    padding-left: 1.75rem;
+    padding-right: 1.75rem;
+  }
+
+  .spending__title {
+    margin-bottom: 1.75rem;
+  }
+
+  .chart {
+    gap: 0.85rem;
+    height: 195px;
+  }
+
+  /* js insert element */
+  .day-spending-value {
+    top: -39px;
+    left: -6px;
+    padding: 0.5rem;
+    font-size: 0.7em;
+  }
+}

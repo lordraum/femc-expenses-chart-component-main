@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/icons/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Expenses chart component</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./css/normalize.css">
+  <link rel="stylesheet" href="./css/styles.css">
+  
+</head>
+<body>
+
+  <section class="expenses">
+
+    <div class="balance">
+      <div class="balance__info">
+        <h2 class="balance__title">
+          My balance
+        </h2>
+        <div class="balance__total">
+          $921.48
+        </div>
+      </div>
+      <img src="./assets/img/logo.svg" alt="balance logo" class="balance__img">
+    </div>
+
+    <article class="spending">
+
+      <h3 class="spending__title">
+        Spending - Last 7 days
+      </h3>
+
+      <div class="chart" id="chart">
+        
+        <div class="chart__bar-container">
+          <div class="chart__bar">
+            <div class="chart__bar-bg"></div>
+          </div>                    
+          <div class="chart__day">
+            mon
+          </div>
+        </div>
+
+        <div class="chart__bar-container">
+          <div class="chart__bar">
+            <div class="chart__bar-bg"></div>
+          </div>                    
+          <div class="chart__day">
+            tue
+          </div>
+        </div>
+        <div class="chart__bar-container">
+          <div class="chart__bar">
+            <div class="chart__bar-bg"></div>
+          </div>                    
+          <div class="chart__day">
+            wed
+          </div>
+        </div>
+        <div class="chart__bar-container">
+          <div class="chart__bar">
+            <div class="chart__bar-bg">              
+            </div>
+          </div>                    
+          <div class="chart__day">
+            thu
+          </div>
+        </div>
+        <div class="chart__bar-container">
+          <div class="chart__bar">
+            <div class="chart__bar-bg"></div>
+          </div>                    
+          <div class="chart__day">
+            fry
+          </div>
+        </div>
+        <div class="chart__bar-container">
+          <div class="chart__bar">
+            <div class="chart__bar-bg">
+              
+            </div>
+          </div>                    
+          <div class="chart__day">
+            sat
+          </div>
+        </div>
+        <div class="chart__bar-container">
+          <div class="chart__bar">
+            <div class="chart__bar-bg">             
+            </div>
+          </div>                    
+          <div class="chart__day">
+            sun
+          </div>
+        </div>
+
+      </div>
+
+      <div class="spending__footer">
+
+        <div class="spending__footer-col-one">
+          <h3 class="spending__total-sub-title">
+            Total this mont
+          </h3>
+          <div class="spending__total">$478.33</div>
+        </div>  
+
+        
+        <div class="spending__footer-col-two">
+          <div class="spending__percentage">
+            +2.4%
+          </div>
+          <h3 class="spending__percentage-sub-title">
+            from last month
+          </h3>
+        </div>      
+        
+      </div>
+    </article>
+
+  </section>  
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">David Gómez</a>.
+  </div>
+
+  <script src="./js/scripts.js"></script>
+</body>
+</html>
